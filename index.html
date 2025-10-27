@@ -133,8 +133,7 @@
         padding: 0;
     }
     #project-detail-container.active {
-        /* Increased max-height for potentially taller content on mobile */
-        max-height: 1200px; 
+        max-height: 800px; /* Adjust as needed */
         padding: 1.5rem 0 0 0;
     }
     
@@ -180,7 +179,6 @@
       position: relative;
       border-radius: 0.75rem;
       overflow: hidden;
-      background-color: rgb(var(--card));
     }
     .scroller__inner li:hover {
       transform: scale(1.05);
@@ -194,9 +192,12 @@
     .scroller:hover .scroller__inner {
       animation-play-state: paused;
     }
-    /* Removed fixed width/height from here; now controlled by Tailwind classes in JS */
     .scroller__inner img {
+      width: 450px;
+      height: 280px;
       object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer;
     }
     
     .image-title {
@@ -253,7 +254,7 @@
     /* Lazy load styles for faster page load */
     .lazy {
       opacity: 0;
-      transition: opacity 0.8s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
     }
     .lazy.loaded {
       opacity: 1;
@@ -315,15 +316,14 @@
             <span class="block text-2xl sm:text-3xl lg:text-4xl font-semibold text-emerald-400 mt-2">Civil Engineer & BIM Modeller</span>
           </h1>
           <p class="mt-5 text-slate-300 text-lg leading-relaxed">
-              I am a Civil Engineer and BIM Modeller specializing in structural design and sustainable construction. My approach is centered on transforming project constraints into efficient, sustainable, and build-ready designs.
+             I am a Civil Engineer and BIM Modeller specializing in structural design and sustainable construction. My approach is centered on transforming project constraints into efficient, sustainable, and build-ready designs.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="#projects" class="btn-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-5 py-3 hover:from-emerald-400 hover:to-blue-500 focus-ring">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               View Projects
             </a>
-            <!-- Made button width responsive -->
-            <a href="assets/saurav-anand-resume.pdf" download="Saurav Anand Resume.pdf" id="downloadResumeLink" class="btn-state-feedback inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-white hover:bg-white/10 focus-ring w-full sm:w-[190px] h-[50px]">
+            <a href="assets/saurav-anand-resume.pdf" download="Saurav Anand Resume.pdf" id="downloadResumeLink" class="btn-state-feedback inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-white hover:bg-white/10 focus-ring w-[190px] h-[50px]">
               <span id="btn-content-wrapper" class="inline-flex items-center gap-2 transition-opacity duration-300">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <span>Download CV</span>
@@ -365,8 +365,8 @@
                       I thrive in collaborative environments and enjoy solving on-site challenges through well-coordinated designs. From drafting detailed drawings in AutoCAD to developing intelligent 3D models in Revit, I’m committed to contributing to projects that are efficient, sustainable, and built to last.
                   </p>
                    <div class="mt-8 flex flex-wrap gap-4">
-                        <a href="#contact" class="btn-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-5 py-3 hover:from-emerald-400 hover:to-blue-500 focus-ring">Let's Connect</a>
-                        <a href="https://www.linkedin.com/in/saurav-anand3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-white hover:bg-white/10 focus-ring">LinkedIn Profile</a>
+                       <a href="#contact" class="btn-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-5 py-3 hover:from-emerald-400 hover:to-blue-500 focus-ring">Let's Connect</a>
+                       <a href="https://www.linkedin.com/in/saurav-anand3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-white hover:bg-white/10 focus-ring">LinkedIn Profile</a>
                    </div>
               </div>
           </div>
@@ -421,16 +421,16 @@
           <div class="p-6">
               <div class="tag mb-2 inline-block">Architectural</div>
               <h3 class="text-xl font-semibold text-white">G+1 Residential Building</h3>
-              <p class="mt-2 text-slate-300 text-sm h-16 overflow-hidden">Architectural planning of a G+1 Residential Building.</p>
+              <p class="mt-2 text-slate-300 text-sm h-16">Architectural planning of a G+1 Residential Building.</p>
               <div class="mt-4 flex items-center gap-4">
-                  <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
-                      View Details
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                  <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
-                      Watch Video
-                  </button>
+                <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
+                    View Details
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
+                    Watch Video
+                </button>
               </div>
           </div>
           <!-- Hidden Detail Content -->
@@ -523,16 +523,16 @@
           <div class="p-6">
               <div class="tag mb-2 inline-block">Structural</div>
               <h3 class="text-xl font-semibold text-white">College Campus</h3>
-              <p class="mt-2 text-slate-300 text-sm h-16 overflow-hidden">Architectural and structural ; clash detection, and design coordination.</p>
+              <p class="mt-2 text-slate-300 text-sm h-16">Architectural and structural ; clash detection, and design coordination.</p>
               <div class="mt-4 flex items-center gap-4">
-                  <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors">
-                      View Details
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                   <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
-                      Watch Video
-                  </button>
+                <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors">
+                    View Details
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                 <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
+                    Watch Video
+                </button>
               </div>
           </div>
           <!-- Hidden Detail Content -->
@@ -657,7 +657,7 @@
               <div class="project-gallery-item">
                     <img src="assets/Projects/college-campus/v1.png" alt="3D view of college campus" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
                     <span class="image-title">3D view of college campus</span>
-                </div>
+              </div>
               <div class="project-gallery-item">
                     <img src="assets/Projects/college-campus/v6.png" alt="3D view of college campus" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
                     <span class="image-title">3D view of college campus</span>
@@ -693,16 +693,16 @@
           <div class="p-6">
               <div class="tag mb-2 inline-block">Structural</div>
               <h3 class="text-xl font-semibold text-white">Warehouse</h3>
-              <p class="mt-2 text-slate-300 text-sm h-16 overflow-hidden">Modeling of the building structure, including concrete columns, brick walls, and the roof truss system, combined with clash detection.</p>
+              <p class="mt-2 text-slate-300 text-sm h-16">Modeling of the building structure, including concrete columns, brick walls, and the roof truss system, combined with clash detection.</p>
               <div class="mt-4 flex items-center gap-4">
-                  <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                      View Details
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                   <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
-                      Watch Video
-                  </button>
+                <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    View Details
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                 <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
+                    Watch Video
+                </button>
               </div>
           </div>
           <!-- Hidden Detail Content -->
@@ -787,16 +787,16 @@
           <div class="p-6">
               <div class="tag mb-2 inline-block">Structural</div>
               <h3 class="text-xl font-semibold text-white">G+3 Residential Apartment</h3>
-              <p class="mt-2 text-slate-300 text-sm h-16 overflow-hidden">Creating coordinated 3D models of the building's core structure and architectural design for validation.</p>
+              <p class="mt-2 text-slate-300 text-sm h-16">Creating coordinated 3D models of the building's core structure and architectural design for validation.</p>
               <div class="mt-4 flex items-center gap-4">
-                  <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                      View Details
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                   <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
-                      Watch Video
-                  </button>
+                <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    View Details
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                 <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
+                    Watch Video
+                </button>
               </div>
           </div>
           <!-- Hidden Detail Content -->
@@ -966,7 +966,7 @@
           <div class="grid md:grid-cols-2 gap-5">
             <div class="glass rounded-xl p-4 flex items-center gap-4 hover-raise reveal-pop" style="transition-delay: .25s">
               <div class="w-12 h-12 rounded-lg bg-cyan-500/15 grid place-items-center flex-shrink-0">
-                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-cyan-400"><path d="M7 20V10a5 5 0 0 1 10 0v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M5 20h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-cyan-400"><path d="M7 20V10a5 5 0 0 1 10 0v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M5 20h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
               </div>
               <div>
                 <div class="font-semibold text-white">Site Safety</div>
@@ -1051,7 +1051,7 @@
         <!-- Item 2: Diploma -->
         <div class="timeline-item reveal-pop pb-10 pl-10">
           <div class="timeline-icon-wrapper border-2 border-blue-500">
-               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-blue-500"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1-12.32 0L12 14z"/><path d="M3 12v6l9 5 9-5v-6l-9 5-9-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-blue-500"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1-12.32 0L12 14z"/><path d="M3 12v6l9 5 9-5v-6l-9 5-9-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="glass rounded-xl p-5 hover-raise">
             <div class="text-sm text-slate-400 mb-1">2022 – 2025</div>
@@ -1112,9 +1112,8 @@
             <textarea id="message" name="message" required rows="5" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-slate-400 focus-ring" placeholder="How can I help?"></textarea>
           </div>
           <div class="flex items-center justify-end">
-            <!-- Made button width responsive -->
-            <button id="form-submit-btn" class="btn-shine inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-5 py-3 hover:from-emerald-400 hover:to-blue-500 focus-ring w-full sm:w-[180px]" type="submit">
-                <!-- Content will be managed by JS -->
+            <button id="form-submit-btn" class="btn-shine inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-5 py-3 hover:from-emerald-400 hover:to-blue-500 focus-ring w-[180px]" type="submit">
+               <!-- Content will be managed by JS -->
             </button>
           </div>
         </form>
@@ -1166,9 +1165,9 @@
       <div class="glass rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
           <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400/90 to-blue-500/90 grid place-items-center text-slate-900 font-extrabold">SA</div>
-          <div class="text-slate-300 text-sm text-center md:text-left">© <span id="year"></span> Saurav Anand — Civil Engineer</div>
+          <div class="text-slate-300 text-sm">© <span id="year"></span> Saurav Anand — Civil Engineer</div>
         </div>
-        <div class="text-sm text-slate-400 text-center md:text-left">Engineered with precision and built to last.</div>
+        <div class="text-sm text-slate-400">Engineered with precision and built to last.</div>
       </div>
     </div>
   </footer>
@@ -1565,9 +1564,7 @@
         const listItem = document.createElement('li');
         const img = document.createElement('img');
         
-        // Replaced fixed CSS width/height with responsive Tailwind classes
-        img.className = 'lazy w-[300px] h-[188px] md:w-[450px] md:h-[280px] object-cover border border-white/10 cursor-pointer';
-        
+        img.classList.add('lazy');
         img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
         img.dataset.src = image.src;
         
@@ -1685,7 +1682,7 @@
     const projectVideoClose = document.getElementById('project-video-close');
 
     function openProjectVideo(videoId) {
-        projectVideoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0`;
+        projectVideoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0`;
         projectVideoModal.classList.remove('hidden');
         setTimeout(() => projectVideoModal.classList.add('show'), 10);
         document.body.style.overflow = 'hidden';
@@ -1730,21 +1727,27 @@
     function updateLightboxImage() {
         if (currentGallery.length > 0) {
             lightboxImg.src = currentGallery[currentIndex];
-            lightboxPrev.style.display = currentGallery.length > 1 ? 'block' : 'none';
-            lightboxNext.style.display = currentGallery.length > 1 ? 'block' : 'none';
+            lightboxPrev.style.display = currentIndex === 0 ? 'none' : 'block';
+            lightboxNext.style.display = currentIndex === currentGallery.length - 1 ? 'none' : 'block';
         }
     }
 
     function showPrevImage() {
-        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-        updateLightboxImage();
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateLightboxImage();
+        }
     }
 
     function showNextImage() {
-        currentIndex = (currentIndex + 1) % currentGallery.length;
-        updateLightboxImage();
+        if (currentIndex < currentGallery.length - 1) {
+            currentIndex++;
+            updateLightboxImage();
+        }
     }
   </script>
 </body>
 </html>
+
+
 
