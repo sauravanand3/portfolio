@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="assets/sauravdp.png">
+  <link rel="icon" type="image/png" href="assets/sauravdp.ico">
   <title>Saurav Anand — Civil Engineering Portfolio</title>
   <meta name="description" content="Portfolio of Saurav Anand — Civil Engineering student (Diploma completed, pursuing B.Tech). Projects, skills, animations, and contact." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -415,9 +415,15 @@
         <div class="relative flex-shrink-0">
             <select id="projectFilter" class="tag appearance-none w-full sm:w-64 pl-4 pr-10 py-2 rounded-xl cursor-pointer">
     <option value="all">All Projects</option>
-    <option value="bim">Architectural & BIM Modeling</option>
-    <option value="coordination">BIM Coordination & Review</option>
-    <option value="structural">Structural Analysis & Design</option>
+    <option value="autocad">AutoCAD</option>
+    <option value="revit">Revit</option>
+    <option value="enscape">Enscape</option>
+    <option value="twinmotion">Twinmotion</option>
+    <option value="navisworks">Navisworks</option>
+    <option value="etabs">ETABS</option>
+    <option value="rcdc">RCDC</option>
+    <option value="safe">SAFE</option>
+    <option value="staad">STAAD Pro</option>
 </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -428,20 +434,25 @@
       <div id="projectGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1 -->
         <article class="project-card group relative glass rounded-2xl hover-raise reveal-pop overflow-hidden" 
-                 data-tags="bim" 
-                 data-video-id="AQ4BWwHqRTA" 
-                 data-video-title="G+1 Residential Building Walkthrough">
+                 data-tags="autocad revit twinmotion navisworks" 
+                 data-video-id="sahda" 
+                 data-video-title="None">
           <div class="relative">
-              <img src="assets/Projects/G1-Building/Thumbnail.png" 
-                   alt="G+1 Residential Building Project Thumbnail" 
+              <img src="assets/Projects/villa/Thumbnail.jpg" 
+                   alt="Villa Thumbnail" 
                    class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/0c111d/e5e7eb?text=Project+Image';">
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="p-6">
-              <div class="tag mb-2 inline-block">Architectural & BIM Modeling</div>
-              <h3 class="text-xl font-semibold text-white">G+1 Residential Building</h3>
-              <p class="mt-2 text-slate-300 text-sm h-16">Architectural planning of a G+1 Residential Building.</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+          	<span class="tag">AutoCAD</span>
+          	<span class="tag">Revit</span>
+          	<span class="tag">Twinmotion</span>
+		<span class="tag">Navisworks</span>
+      		</div>
+              <h3 class="text-xl font-semibold text-white">Villa</h3>
+              <p class="mt-2 text-slate-300 text-sm h-16">End-to-End 3D Virtual Construction & Visualization of a Luxury Villa.</p>
               <div class="mt-4 flex items-center gap-4">
                 <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
                     View Details
@@ -457,68 +468,100 @@
           <div class="project-full-details hidden">
             <h4 class="font-bold text-lg text-white mb-2">Key Responsibilities:</h4>
             <ul class="list-disc list-inside space-y-1 text-slate-300 mb-4">
-              <li>Prepared detailed 3D model of a G+1 residential building using Revit & AutoCAD, focusing on accurate representation of architectural components.</li>
-              <li>Developed floor plans, elevations, and sectional views from the model to ensure design clarity.</li>
-              <li>Applied appropriate layers, materials, and textures for walls, slabs, roofs, openings, and finishes.</li>
-              <li>Ensured all drawings complied with standard building codes.</li>
+              <li>Developed a detailed 3D BIM model from 2D CAD drafts, ensuring high precision in spatial planning, wall systems, and openings.</li>
+              <li>Created a robust structural framework, including foundations, columns, beams, and slabs, aligned with architectural constraints.</li>
+              <li>Conducted automated clash tests to identify hard and soft interferences between architectural elements and structural members.</li>
+              <li>Applied high-quality textures, lighting, and environmental assets to produce photorealistic interior and exterior renders.</li>
             </ul>
             <h4 class="font-bold text-lg text-white mb-2">Project Gallery:</h4>
             <div class="project-gallery grid grid-cols-2 sm:grid-cols-3 gap-2">
                 <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/3d3.png" alt="3D View 1" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">3D View 1</span>
+                    <img src="assets/Projects/villa/Image1.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
                 </div>
                 <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/3d2.png" alt="3D View 2" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">3D View 2</span>
+                    <img src="assets/Projects/villa/PlinthFloor_Room.png" alt="Plinth Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Plinth Floor Plan</span>
                 </div>
                 <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/FloorPlan.png" alt="Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">Floor Plan</span>
+                    <img src="assets/Projects/villa/Site_Layout.png" alt="Site Layout" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Site Layout</span>
                 </div>
                 <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/EastEle.png" alt="East Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">East Elevation</span>
+                    <img src="assets/Projects/villa/Image2.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
                 </div>
                 <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/3d4.png" alt="3D View 3" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">3D View 3</span>
+                    <img src="assets/Projects/villa/Image3.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
                 </div>
                  <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/3d16.png" alt="3D View 4" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">3D View 4</span>
+                    <img src="assets/Projects/villa/Plinth_Level.png" alt="Plinth Level" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Plinth Floor Detail Plan</span>
                 </div>
                  <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/1stFPlan.png" alt="1st Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">1st Floor Plan</span>
+                    <img src="assets/Projects/villa/First_Level.png" alt="1st Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">First Floor Detailed Plan</span>
                 </div>
                  <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/GFPlan.png" alt="Ground Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">Ground Floor Plan</span>
+                    <img src="assets/Projects/villa/FirstFloor_Room.png" alt="1st Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">First Floor Plan</span>
                 </div>
                   <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/Section.png" alt="Section" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">Section</span>
+                    <img src="assets/Projects/villa/Second_Level.png" alt="Second_Level" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Second Floor Detailed Plan</span>
                 </div>
                   <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/NorthEle.png" alt="North Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">North Elevation</span>
+                    <img src="assets/Projects/villa/SecondFloor_level.png" alt="Second_Level" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Second Floor Plan</span>
                 </div>
                  <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/SouthEle.png" alt="South Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">South Elevation</span>
+                    <img src="assets/Projects/villa/Footing_Layout.png" alt="Footing" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Foundation Layout</span>
                 </div>
                   <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/WestEle.png" alt="West Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <img src="assets/Projects/villa/West_Ele.png" alt="West Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
                     <span class="image-title">West Elevation</span>
                 </div>
                   <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/3d5.png" alt="3D View 5" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">3D View 5</span>
+                    <img src="assets/Projects/villa/North_Ele.png" alt="North Ele" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">North Elevation</span>
                 </div>
                   <div class="project-gallery-item">
-                    <img src="assets/Projects/G1-Building/3d1.png" alt="3D View 6" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
-                    <span class="image-title">3D View 6</span>
+                    <img src="assets/Projects/villa/East_Ele.png" alt="East Ele" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">East Elevation</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Section_xx.png" alt="Section XX" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Section XX</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Section_yy.png" alt="Section YY" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Section YY</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Image5.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Image7night.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Image17.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Image23.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Image30.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/villa/Image32.jpg" alt="3D View" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D Render Image</span>
                 </div>
             </div>  
             <h4 class="font-bold text-lg text-white mt-4 mb-2">Tools Used:</h4>
@@ -530,7 +573,7 @@
 
         <!-- Card 2 -->
         <article class="project-card group relative glass rounded-2xl hover-raise reveal-pop overflow-hidden" 
-                 data-tags="bim"
+                 data-tags="autocad revit enscape"
                  data-video-id="CsjCxlKemwg"
                  data-video-title="College campus walkthrough">
           <div class="relative">
@@ -541,7 +584,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="p-6">
-              <div class="tag mb-2 inline-block">Architectural & BIM Modeling</div>
+              <div class="flex flex-wrap gap-2 mb-3">
+          	<span class="tag">AutoCAD</span>
+          	<span class="tag">Revit</span>
+          	<span class="tag">Enscape</span>
+      		</div>
               <h3 class="text-xl font-semibold text-white">College Campus</h3>
               <p class="mt-2 text-slate-300 text-sm h-16">Architectural and structural ; clash detection, and design coordination.</p>
               <div class="mt-4 flex items-center gap-4">
@@ -700,7 +747,113 @@
 
         <!-- Card 3 -->
         <article class="project-card group relative glass rounded-2xl hover-raise reveal-pop overflow-hidden" 
-                 data-tags="bim"
+                 data-tags="autocad revit enscape" 
+                 data-video-id="AQ4BWwHqRTA" 
+                 data-video-title="G+1 Residential Building Walkthrough">
+          <div class="relative">
+              <img src="assets/Projects/G1-Building/Thumbnail.png" 
+                   alt="G+1 Residential Building Project Thumbnail" 
+                   class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/0c111d/e5e7eb?text=Project+Image';">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          </div>
+          <div class="p-6">
+		<div class="flex flex-wrap gap-2 mb-3">
+          	<span class="tag">AutoCAD</span>
+          	<span class="tag">Revit</span>
+          	<span class="tag">Enscape</span>
+      		</div>
+              <h3 class="text-xl font-semibold text-white">G+1 Residential Building</h3>
+              <p class="mt-2 text-slate-300 text-sm h-16">Architectural planning of a G+1 Residential Building.</p>
+              <div class="mt-4 flex items-center gap-4">
+                <button class="details-btn inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
+                    View Details
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button class="video-btn inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>
+                    Watch Video
+                </button>
+              </div>
+          </div>
+          <!-- Hidden Detail Content -->
+          <div class="project-full-details hidden">
+            <h4 class="font-bold text-lg text-white mb-2">Key Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-1 text-slate-300 mb-4">
+              <li>Prepared detailed 3D model of a G+1 residential building using Revit & AutoCAD, focusing on accurate representation of architectural components.</li>
+              <li>Developed floor plans, elevations, and sectional views from the model to ensure design clarity.</li>
+              <li>Applied appropriate layers, materials, and textures for walls, slabs, roofs, openings, and finishes.</li>
+              <li>Ensured all drawings complied with standard building codes.</li>
+            </ul>
+            <h4 class="font-bold text-lg text-white mb-2">Project Gallery:</h4>
+            <div class="project-gallery grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/3d3.png" alt="3D View 1" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D View 1</span>
+                </div>
+                <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/3d2.png" alt="3D View 2" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D View 2</span>
+                </div>
+                <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/FloorPlan.png" alt="Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Floor Plan</span>
+                </div>
+                <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/EastEle.png" alt="East Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">East Elevation</span>
+                </div>
+                <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/3d4.png" alt="3D View 3" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D View 3</span>
+                </div>
+                 <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/3d16.png" alt="3D View 4" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D View 4</span>
+                </div>
+                 <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/1stFPlan.png" alt="1st Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">1st Floor Plan</span>
+                </div>
+                 <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/GFPlan.png" alt="Ground Floor Plan" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Ground Floor Plan</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/Section.png" alt="Section" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">Section</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/NorthEle.png" alt="North Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">North Elevation</span>
+                </div>
+                 <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/SouthEle.png" alt="South Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">South Elevation</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/WestEle.png" alt="West Elevation" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">West Elevation</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/3d5.png" alt="3D View 5" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D View 5</span>
+                </div>
+                  <div class="project-gallery-item">
+                    <img src="assets/Projects/G1-Building/3d1.png" alt="3D View 6" class="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+                    <span class="image-title">3D View 6</span>
+                </div>
+            </div>  
+            <h4 class="font-bold text-lg text-white mt-4 mb-2">Tools Used:</h4>
+            <div class="flex flex-wrap gap-2">
+                <span class="tag">AutoCAD</span><span class="tag">Revit</span><span class="tag">Enscape</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="project-card group relative glass rounded-2xl hover-raise reveal-pop overflow-hidden" 
+                 data-tags="autocad revit enscape"
                  data-video-id="mF2128sP1b4"
                  data-video-title="Warehouse">
           <div class="relative">
@@ -711,7 +864,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="p-6">
-              <div class="tag mb-2 inline-block">Architectural & BIM Modeling</div>
+                <div class="flex flex-wrap gap-2 mb-3">
+          	<span class="tag">AutoCAD</span>
+          	<span class="tag">Revit</span>
+          	<span class="tag">Enscape</span>
+      		</div>
               <h3 class="text-xl font-semibold text-white">Warehouse</h3>
               <p class="mt-2 text-slate-300 text-sm h-16">Modeling of the building structure, including concrete columns, brick walls, and the roof truss system, combined with clash detection.</p>
               <div class="mt-4 flex items-center gap-4">
@@ -791,10 +948,9 @@
           </div>
         </article>
 
-
-        <!-- Card 4 -->
+        <!-- Card 5 -->
         <article class="project-card group relative glass rounded-2xl hover-raise reveal-pop overflow-hidden" 
-                 data-tags="bim"
+                 data-tags="autocad revit enscape"
                  data-video-id="mF2128sP1b4"
                  data-video-title="G+3 Residential Apartment">
           <div class="relative">
@@ -805,7 +961,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div class="p-6">
-              <div class="tag mb-2 inline-block">Architectural & BIM Modeling</div>
+              <div class="flex flex-wrap gap-2 mb-3">
+          	<span class="tag">AutoCAD</span>
+          	<span class="tag">Revit</span>
+          	<span class="tag">Enscape</span>
+      		</div>
               <h3 class="text-xl font-semibold text-white">G+3 Residential Apartment</h3>
               <p class="mt-2 text-slate-300 text-sm h-16">Creating coordinated 3D models of the building's core structure and architectural design for validation.</p>
               <div class="mt-4 flex items-center gap-4">
@@ -1635,17 +1795,20 @@
 
     // --- CONTENT YOU CAN EASILY EDIT ---
     const showcaseImages = [
-      { src: 'assets/3d2gpb.png', alt: 'G+3 GPB BIM model' },
-      { src: 'assets/ghs2.png', alt: 'G+3 Girls hostel structural model' },
+      { src: 'assets/visualshowcase/3d2gpb.png', alt: 'GPB BIM model' },
+      { src: 'assets/visualshowcase/villaplinthfp.png', alt: 'Villa Plinth Floor Rooms' },
+      { src: 'assets/visualshowcase/villarender1.jpg', alt: 'Villa BIM model render image' },
       { src: 'assets/cmmodel.jpg', alt: 'Proud moment showcasing our model to CM Nitish Kumar and dignitaries.' },
-      { src: 'assets/AcademicFloorPlan.png', alt: 'Academic building floor plan design' },
+      { src: 'assets/visualshowcase/villarender3.jpg', alt: 'Villa BIM model interior render image' },
+      { src: 'assets/visualshowcase/AcademicFloorPlan.png', alt: 'Academic building floor plan design' },
       { src: 'assets/model.jpg', alt: 'Mini model of college campus' },
-      { src: 'assets/ghstructure.png', alt: 'G+3 Girls hostel structural model' },
-      { src: 'assets/3dd2gpb.png', alt: 'BIM model of academic building' },
-      { src: 'assets/Workshop.png', alt: 'Workshop layout' },
-      { src: 'assets/ssfstructure.png', alt: 'G+3 Staff quarter structural drawing' },
-      { src: 'assets/3ddgpb.png', alt: 'GPB render' },
-      { src: 'assets/fp.png', alt: 'G+2 building floor plan' }
+      { src: 'assets/visualshowcase/ghstructure.png', alt: 'G+3 Girls hostel structural model' },
+      { src: 'assets/visualshowcase/3dd2gpb.png', alt: 'BIM model of academic building' },
+      { src: 'assets/visualshowcase/Workshop.png', alt: 'Workshop layout' },
+      { src: 'assets/visualshowcase/ssfstructure.png', alt: 'G+3 Staff quarter structural drawing' },
+      { src: 'assets/visualshowcase/ghs2.png', alt: 'G+3 Girls hostel structural model' },
+      { src: 'assets/visualshowcase/villarender.jpg', alt: 'Villa BIM Model' },
+      { src: 'assets/visualshowcase/fp.png', alt: 'G+2 building floor plan' }
     ];
 
     const showcaseVideos = [
@@ -1848,4 +2011,3 @@
   </script>
 </body>
 </html>
-
